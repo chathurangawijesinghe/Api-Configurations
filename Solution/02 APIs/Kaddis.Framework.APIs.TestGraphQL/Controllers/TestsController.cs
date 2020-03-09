@@ -2,13 +2,12 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Kaddis.Framework.APIs.TestGraphQL.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Microsoft.AspNet.OData;
-using Kaddis.Framework.APIs.TestOData.Models;
 
-namespace Kaddis.Framework.APIs.TestOData.Controllers
+namespace Kaddis.Framework.APIs.TestGraphQL.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
@@ -22,16 +21,15 @@ namespace Kaddis.Framework.APIs.TestOData.Controllers
         }
 
         // GET: api/Tests
-        [EnableQuery()]
         [HttpGet]
-        public IEnumerable<Test> GetTests()
+        public async Task<ActionResult<IEnumerable<Models.Test>>> GetTests()
         {
-            return _context.Tests.ToList();
+            return await _context.Tests.ToListAsync();
         }
 
         // GET: api/Tests/5
         [HttpGet("{id}")]
-        public async Task<ActionResult<Test>> GetTest(long id)
+        public async Task<ActionResult<Models.Test>> GetTest(long id)
         {
             var test = await _context.Tests.FindAsync(id);
 
@@ -47,7 +45,7 @@ namespace Kaddis.Framework.APIs.TestOData.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPut("{id}")]
-        public async Task<IActionResult> PutTest(long id, Test test)
+        public async Task<IActionResult> PutTest(long id, Models.Test test)
         {
             if (id != test.Id)
             {
@@ -79,7 +77,7 @@ namespace Kaddis.Framework.APIs.TestOData.Controllers
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for
         // more details see https://aka.ms/RazorPagesCRUD.
         [HttpPost]
-        public async Task<ActionResult<Test>> PostTest(Test test)
+        public async Task<ActionResult<Models.Test>> PostTest(Models.Test test)
         {
             _context.Tests.Add(test);
             await _context.SaveChangesAsync();
@@ -89,7 +87,7 @@ namespace Kaddis.Framework.APIs.TestOData.Controllers
 
         // DELETE: api/Tests/5
         [HttpDelete("{id}")]
-        public async Task<ActionResult<Test>> DeleteTest(long id)
+        public async Task<ActionResult<Models.Test>> DeleteTest(long id)
         {
             var test = await _context.Tests.FindAsync(id);
             if (test == null)

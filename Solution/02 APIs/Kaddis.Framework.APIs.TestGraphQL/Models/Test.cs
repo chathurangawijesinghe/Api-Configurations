@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Kaddis.Framework.APIs.Test.Models
+namespace Kaddis.Framework.APIs.TestGraphQL.Models
 {
     public class Test
     {
@@ -11,6 +11,6 @@ namespace Kaddis.Framework.APIs.Test.Models
 
         public string Description { get; set; }
 
-        public List<TestItem> TestItems { get; set; }
+        public ICollection<TestItem> TestItems { get; set; }
     }
 }

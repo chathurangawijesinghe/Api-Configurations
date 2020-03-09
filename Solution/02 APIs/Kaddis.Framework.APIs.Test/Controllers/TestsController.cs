@@ -2,10 +2,10 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
+using Kaddis.Framework.APIs.Test.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
-using Kaddis.Framework.APIs.Test.Models;
 
 namespace Kaddis.Framework.APIs.Test.Controllers
 {

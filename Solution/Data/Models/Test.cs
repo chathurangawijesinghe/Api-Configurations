@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 
-namespace Kaddis.Framework.APIs.Test.Models
+namespace Data.Models
 {
     public class Test
     {

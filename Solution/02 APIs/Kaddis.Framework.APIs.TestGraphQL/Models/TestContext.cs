@@ -2,9 +2,10 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Security.Cryptography.Xml;
 using System.Threading.Tasks;
 
-namespace Kaddis.Framework.APIs.Test.Models
+namespace Kaddis.Framework.APIs.TestGraphQL.Models
 {
     public class TestContext : DbContext
     {
@@ -14,6 +15,6 @@ namespace Kaddis.Framework.APIs.Test.Models
 
         public DbSet<Test> Tests { get; set; }
 
-        //public DbSet<TestItem> TestItems { get; set; }
+        public DbSet<TestItem> TestItems { get; set; }
     }
 }

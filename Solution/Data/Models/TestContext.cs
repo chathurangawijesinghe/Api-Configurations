@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace Kaddis.Framework.APIs.Test.Models
+namespace Data.Models
 {
     public class TestContext : DbContext
     {

@@ -13,5 +13,7 @@ namespace Kaddis.Framework.APIs.TestOData.Models
         }
 
         public DbSet<Test> Tests { get; set; }
+
+        //public DbSet<TestItem> TestItems { get; set; }
     }
 }
