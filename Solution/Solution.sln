@@ -15,6 +15,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kaddis.Framework.APIs.TestO
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Kaddis.Framework.APIs.TestGraphQL", "02 APIs\Kaddis.Framework.APIs.TestGraphQL\Kaddis.Framework.APIs.TestGraphQL.csproj", "{1D049CF7-4E2D-45F1-BF11-727957376F7E}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Kaddis.Framework.APIs.gRPC", "02 APIs\Kaddis.Framework.APIs.gRPC\Kaddis.Framework.APIs.gRPC.csproj", "{782F11E4-23D6-4C35-8E70-E43734E5C2BA}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,6 +39,10 @@ Global
 		{1D049CF7-4E2D-45F1-BF11-727957376F7E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{1D049CF7-4E2D-45F1-BF11-727957376F7E}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{1D049CF7-4E2D-45F1-BF11-727957376F7E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{782F11E4-23D6-4C35-8E70-E43734E5C2BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{782F11E4-23D6-4C35-8E70-E43734E5C2BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{782F11E4-23D6-4C35-8E70-E43734E5C2BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{782F11E4-23D6-4C35-8E70-E43734E5C2BA}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -46,6 +52,7 @@ Global
 		{26609928-AD49-4724-875C-54C8DDC689F1} = {C4643063-87AD-47EF-A431-3EC5F6DCD40E}
 		{62751EC4-84C6-47DC-9CB7-52EB7FA108BA} = {C4643063-87AD-47EF-A431-3EC5F6DCD40E}
 		{1D049CF7-4E2D-45F1-BF11-727957376F7E} = {C4643063-87AD-47EF-A431-3EC5F6DCD40E}
+		{782F11E4-23D6-4C35-8E70-E43734E5C2BA} = {C4643063-87AD-47EF-A431-3EC5F6DCD40E}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {8CED3314-5860-472B-A285-E000E91B12E3}
