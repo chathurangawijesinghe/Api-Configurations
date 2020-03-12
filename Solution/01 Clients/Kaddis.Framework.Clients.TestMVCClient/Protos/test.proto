@@ -1,0 +1,38 @@
+syntax = "proto3";
+
+option csharp_namespace = "Kaddis.Framework.Clients.TestMVCClient.Protos";
+
+// option csharp_namespace = "Kaddis.Framework.APIs.gRPC.Protos";
+
+package test;
+
+// The greeting service definition.
+service Tester {
+  // Sends a greeting
+  rpc GetTests (TestRequest) returns (TestReply);
+}
+
+// The request message containing the user's name.
+message TestRequest {
+  string orderBy = 1;
+}
+
+message TestItem {
+    int32 id = 1;
+    string name = 2;
+    string definition = 3;
+}
+
+message Test {
+  int32 id = 1;
+  string name = 2;
+  string description = 3;
+
+  repeated TestItem testItems = 4;
+}
+
+// The response message containing the greetings.
+message TestReply {
+
+  repeated Test tests = 1;
+}

@@ -6,7 +6,7 @@ using Grpc.Core;
 using Kaddis.Framework.APIs.gRPC.Protos;
 using Microsoft.Extensions.Logging;
 
-namespace Kaddis.Framework.APIs.gRPC.Services
+namespace Kaddis.Framework.APIs.gRPC
 {
     public class TesterService : Tester.TesterBase
     {
