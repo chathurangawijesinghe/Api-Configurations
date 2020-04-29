@@ -41,7 +41,7 @@ namespace Kaddis.Framework.APIs.TestOData
 
             services.AddEntityFrameworkSqlite()
                 .AddDbContext<TestContext>(opt =>
-                opt.UseSqlite("Data Source=test.db"));
+                opt.UseSqlServer("Data Source=test.db"));
 
             services.AddControllers(options => {
                 options.EnableEndpointRouting = false;

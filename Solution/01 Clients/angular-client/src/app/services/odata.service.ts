@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
 export class OdataService {
-  getData() {
-    //throw new Error("Method not implemented.");
-  }
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
+
+  getData() {
+    return this.http.get('https://localhost:44386/odata/tests?$select=name,id');
+  }
 }

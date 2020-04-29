@@ -26,6 +26,11 @@ namespace Kaddis.Framework.APIs.TestOData.Controllers
         [HttpGet]
         public IEnumerable<Test> GetTests()
         {
+            return new List<Test>()
+            {
+                new Test() { Id = 1, Name = "test from odata", Description = "test des" }
+            };
+
             return _context.Tests.ToList();
         }
 

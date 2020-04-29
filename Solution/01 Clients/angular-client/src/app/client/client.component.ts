@@ -29,7 +29,9 @@ export class ClientComponent implements OnInit {
             this.tests = data;
       });
     } else if (this.clientName === 'OData') {
-      this.odataService.getData();
+      this.odataService.getData().subscribe((data) => {
+            this.tests = data.value;
+      });
     } else if (this.clientName === 'GraphQL') {
       this.graphqlService.getData();
     } else {
